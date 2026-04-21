@@ -7,7 +7,6 @@ function clasificarPaciente(gravedad) {
 const   nombre        =          document            .          getElementById              ("paciente")          .             value             ;
   var                  mensaje =         ""              ;
 
-// Uso de '==' en lugar de '===' (Comparación estricta)
 if (gravedad == "critico") {
 mensaje = "🚨 Alerta Roja: Quirófano inmediato para "            + nombre;
 } else if (gravedad == "estable") {
@@ -17,9 +16,23 @@ mensaje = '✅ Paciente ' + nombre                      + ' asignado a sala de e
 }
 
 // Falta de puntos y coma
-console.log("Procesando triaje...")
 document.getElementById("pantalla")                    .innerHTML = mensaje
 }
 
-// Función flecha mal formateada para probar a Prettier
-const borrarRegistro = () => {  console.log("Borrando...");                                     return null;  }
+function calcular() {
+    // Constante no definida
+    const numero_pacientes = 100;
+    console.log(total + numero_pacientes);
+    return 10;
+    
+    // Codigo inalcanzable
+    console.log("Este mensaje nunca se verá"); 
+}
+console.log(calcular());
+
+//El valor asignado no es usado
+const nombre = "Juan";
+
+// Error de constante no puede cambiar de valor
+nombre = "Pedro";
+console.log(nombre);
